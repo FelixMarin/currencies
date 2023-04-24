@@ -1,0 +1,41 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+spring:
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+  flyway:
+    ddl-auto: create-drop
+    enabled: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/exercicedb
+    username: 'user'
+    password: '0000'
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: create-drop
+      physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+      format_sql: true
+      use_sql_comments: true
+      show_sql: true
+
+springfox:
+  documentation:
+    open-api:
+      v3:
+        path: /api-docs
+
+springdoc:
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
