@@ -1,3 +1,12 @@
+# Instalación y Ejecución del proyecto
+
+1. Crear la base de datos en PostgresSQL. 
+Para ejecutar el proyecto, en primer lugar hay que crear la base de datos 'exercisedb' en PosgresSQL y añadir el usuario 'user' con los permisos adecuados y con la contraseña indicada en el fichero de propiedades del proyecto 'properties.yml'.
+
+2. Una vez creada la BBDD y descargado el proyecto, ejecutar el comando 'spring-boot:run'. Con ello, Flyway se encargará de crear la entidad con los datos correspondientes en la BBDD.
+
+3. Para probar los endPoints creados, se accederá a la ruta 'http://localhost:8080/' desde el navegador, la cual, nos llevará a la ventana de swagger en la que están documentados todos los servicios creados para la práctica.
+
 # spring-boot-exercice-1
 
 Imagina que estamos trabajando en un proyecto para la plataforma de e-commerce de una compañía. Dicha empresa gestiona varias marcas dentro de dicha plataforma.
